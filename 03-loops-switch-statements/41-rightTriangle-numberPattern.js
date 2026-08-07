@@ -10,8 +10,8 @@ let n = 5;
 for (let i = 1; i <= n; i++) {
   let row = "";
 
-  for (let j = 1; j <= i; j++) {
-    row += i + " ";
+  for (let j = 1; j <= i; j++) {  // Ye decide karta hai ki row me kitni baar print hoga.
+    row += i + " ";   //Same row number print hoga
   }
 
   console.log(row);
@@ -32,14 +32,14 @@ for (let i = 1; i <= m; i++) {
     let row = "";
 
     for (let j = 1; j <= i; j++) {
-        row += j + " ";
+        row += j + " ";  // j ko print kr rhe hai kyuki j me increasing number print hote hai
     }
 
     console.log(row);
 
 }
 
-// 3. Continuous Number Pattern
+// 3. Floyd's Triangle ( Continuous Number Pattern )
 // 1
 // 2 3
 // 4 5 6
@@ -54,7 +54,7 @@ for (let i = 1; i <= p; i++) {
     let row = "";
 
     for (let j = 1; j <= i; j++) {
-        row += num + " ";
+        row += num + " "; // continuous number print
         num++;
     }
 
@@ -84,29 +84,6 @@ for (let i = 1; i <= r; i++) {
 
 }
 
-// 5. Floyd's Triangle
-
-// 1
-// 2 3
-// 4 5 6
-// 7 8 9 10
-// 11 12 13 14 15
-
-let q = 5;
-let numb = 1;
-
-for (let i = 1; i <= q; i++) {
-
-    let row = "";
-
-    for (let j = 1; j <= i; j++) {
-        row += numb + " ";
-        numb++;
-    }
-
-    console.log(row);
-
-}
 
 
 // Outer Loop (i)
@@ -124,3 +101,13 @@ for (let i = 1; i <= q; i++) {
 // j → Increasing numbers (1 2 3)
 // num++ → Continuous numbers (Floyd's Triangle)
 // i - j + 1 or reverse loop → Reverse numbers (3 2 1)
+
+// Print i        → 1 / 2 2 / 3 3 3
+// Print j        → 1 / 1 2 / 1 2 3
+// Print num++    → 1 / 2 3 / 4 5 6
+// Reverse j--    → 1 / 2 1 / 3 2 1
+
+// Outer Loop (i)  → Rows
+// Inner Loop (j)  → Columns
+// Print Statement → Kya print karna hai
+
