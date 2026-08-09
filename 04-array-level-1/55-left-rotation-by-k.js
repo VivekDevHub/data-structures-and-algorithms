@@ -16,6 +16,6 @@ for (let j = 1; j <= k; j++) {
 }
 
 console.log(arr);
-
+return
 // Time: O(n × k)
 // Space: O(1)
