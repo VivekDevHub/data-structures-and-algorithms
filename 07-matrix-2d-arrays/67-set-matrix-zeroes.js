@@ -11,7 +11,7 @@
 const matrix = [
   [1, 1, 1],
   [1, 0, 1],
-  [1, 1, 1]
+  [1, 1, 1],
 ];
 
 const rows = matrix.length;
@@ -23,12 +23,10 @@ let zeroCols = [];
 // Step 1: Find all zero positions
 for (let i = 0; i < rows; i++) {
   for (let j = 0; j < cols; j++) {
-
     if (matrix[i][j] === 0) {
       zeroRows.push(i);
       zeroCols.push(j);
     }
-
   }
 }
 
